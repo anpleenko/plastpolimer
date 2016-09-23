@@ -14,53 +14,22 @@ import sass           from 'gulp-sass';
 import csso           from 'gulp-csso';
 import perfectionist  from 'perfectionist';
 import postcss        from 'gulp-postcss';
-import pxtorem        from 'postcss-pxtorem';
-import selector       from 'postcss-custom-selectors';
-import mqpacker       from "css-mqpacker";
-import autoprefixer   from 'autoprefixer';
+// import pxtorem        from 'postcss-pxtorem';
 import bulkSass       from 'gulp-sass-glob-import';
 import babel          from 'gulp-babel';
 import uglify         from 'gulp-uglify';
 import imagemin       from 'gulp-imagemin';
 import browserSync    from 'browser-sync';
 
-let postCSSFocus = function (css) {
-    css.walkRules(function (rule) {
-        if (rule.selector.indexOf(':hover') !== -1) {
-            var focuses = [];
-            rule.selectors.forEach(function (selector) {
-                if (selector.indexOf(':hover') !== -1) {
-                    focuses.push(selector.replace(/:hover/g, ':focus'));
-                }
-            });
-            if (focuses.length) {
-                rule.selectors = rule.selectors.concat(focuses);
-            }
-        }
-
-        if (rule.selector.indexOf(':only-hover') !== -1) {
-            var hovered = [];
-            rule.selectors.forEach(function (selector) {
-                if (selector.indexOf(':only-hover') !== -1) {
-                    hovered.push(selector.replace(/:only-hover/g, ':hover'));
-                }
-            });
-            if (hovered.length) {
-                rule.selectors = hovered;
-            }
-        }
-    })
-};
-
 let PROCESSORS = [
     // pxtorem({
     //     root_value: 14,
     //     selector_black_list: ['html']
     // }),
-    autoprefixer({ browsers: ['last 2 versions', '> 1%'] }),
-    mqpacker,
-    selector,
-    postCSSFocus
+    require('autoprefixer')({ browsers: ['last 2 versions', '> 1%'] }),
+    require("css-mqpacker"),
+    require('postcss-custom-selectors'),
+    require('postcss-focus-hover')
 ];
 
 let BOWER_MAIN_FILES_CONFIG = {
