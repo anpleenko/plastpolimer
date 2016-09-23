@@ -1,15 +1,14 @@
 language: node_js
 node_js:
-  - 0.12
+  - 6
 env:
   global:
     - GH_REF: github.com/vaeum/plastpolimer.git
-    - secure: oeYteWT9OUfqx8UbLfevGaIrYY+cBq4Icw/jQlncG2zl2rA5BUxw8gg/xkYahW55wKfYsen42A/1tJg2+lZ2lfyvjDyWwbSORvFYLRr+os28KgWbXs/Z7oBS/lfO6D2O4Ou4/gXh/MPZOL+ZU0iTFcsaEzfGRl9COghwtHHgxxHMnx31zUi0huXUmn79yH+V/PiWKJwdw+ZezlpCawT+ZSv4hGMmAsvxnWjR8nbNmJkWH8WUva7tWwA4xYhF1LdjvB13rqLfNtPyJqm0JpvAmoi/MEeZVBPWgDinkmyiVy0Wt1R8RnjmgiHFx22KWRkOUhmYck+Fh0sbOyoTDFbp5EvJ4eV7RoiM1PtpWuJoSqs79lgBjGibs8mU5wNh4jtQ2UwK62YlekW+2X5zW0N4ufOBc91bq7yidZtzvsBFK2AnZKzDs9OOMVUkZGlEEKWDYRF+cE/+Xo2E0FWFsIiXAtymFWT+oPgwu5z2i5Ooc3aU2d0ClPkWV3tM6B/mi6INwnZ0dvsdUbZT478iF6Us91+6XGktQlsbaZ+UHLHlmXMvKtuqQwMgWEXDIVuKSpTz47m1pcvYWzHMevWtSZJBnNsVdT7/8tHLTgcR6aYfqf4kYjOjC8I8d2kjTWS+3acZyxhImSQXUUEPcPQ7yXEtlEtzWEZ4xg9OuTS63zEAZ+o=
+    - secure: V1PijHYxB43a5UbF5KoAGXZkrEp2DBGamwlIxu0Tr0ecxQ3/C2u6y7ogHno7omLUupXkz3eHH6s7XG1HK6mS34bwZVygdUNGHZcfk0/PSomRaKnRgB+ltgExX3Q/FFxU2QEfDsAMBWLWKjxuKCDHp+1Qew955M4DtfgMAKHRvXsf6elClx8vCb063kfFa7HvfWDMZCE05T6xVGf+DKj4TYC3DBonBIxxYMIYaCXum1s/9Znhxf6PQLkRZGHDhakNS4DuU/dSeIEjEjAeqHhi00tQHEzLve+kALarIczpstGRsF61NDHBNnzNLnqEepnRyM9TVOiet0W+Nii/6NkBYhc1TpAEAU+WClkeJ4TIAi8guajJ3u6uFRHHWfEQOaJNIOPihfrdLmDSqp2gLo0r1tIg7dffjMfAwmw+Uebdn+IG/YJyR/+pMdrWcwtVrfqne2jb6plVumArB2dw4IAstJ8WeDbbGctln7x3TaihNe7n6m4WCajQ0rKVwSKWX9i0YMlVe2pZ+PILPBffVIFqC210r0W/u9FkjvaqHAWBzPS5TZa6dBbS6Wt3OvzYfc5WKKcYPGUJNzFBYSiXPr3MAvMu3vowKxZu5yQ/Fl7m5wfkwqPYlYF89F2ELSWTplinevs6ah4XARF/Ig8GQJRnCuuif9JzXpA+Nnh8xI4sfbA=
 before_script:
   - npm install -g bower
   - npm install -g gulp
-  - bower install
-  - npm install
+  - npm config set depth 0
 script:
   - npm run build
   - cd app
@@ -18,4 +17,4 @@ script:
   - 'git config user.email "vaeum@yahoo.com"'
   - git add .
   - 'git commit -m "Deploy to GitHub Pages"'
-  - 'git push --force --quiet "https://${GITHUB_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1'
+  - 'git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1'

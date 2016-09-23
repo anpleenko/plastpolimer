@@ -11,6 +11,7 @@
     "url": "https://github.com/vseopro/vseopro"
   },
   "scripts": {
+    "init": "npm i; npm run build",
     "prebuild": "rm -rf app && rm -rf assets/bower && bower install",
     "build": "gulp bootstrap && gulp scss && gulp imagemin && gulp babel && gulp jade && gulp static",
     "start": "gulp"
