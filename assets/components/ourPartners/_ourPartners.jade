@@ -1,0 +1,8 @@
+div(block="our-partners")
+  .container(elem="container")
+    h3(elem="section-title") Наши партнеры
+    .our-partners-slider(elem="slider")
+      -for(var i = 0; i < 5; i++)
+        -for(var o = 0; o < 5; o++)
+          div.transform-middle
+            img(src="img/img_partners#{o + 1}.png", alt="partners logo")

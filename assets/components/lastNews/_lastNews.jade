@@ -1,0 +1,13 @@
+.container(block='last-news')
+  h3(elem="section-title") Последние новости
+  .col-table.row(elem="row")
+    each item in lastNews
+      .col-cell.col-md-4(elem="item")
+        div(elem="header")
+          a(href="#" elem="img-link").db
+              img(src="#{item.imageURL}", alt="our service image").img-responsive
+          a(href="#" elem="title-link").dib
+            h4(elem="title")= item.title
+          p(elem="text")= item.text
+        div(elem="footer")
+          a(href="#" elem="button").btn-last-news Читать подробнее

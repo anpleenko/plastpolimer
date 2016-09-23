@@ -1,0 +1,20 @@
+.focus-block{
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background: url(../img/img_focus_block.jpg) top center no-repeat;
+  margin-bottom: 65px;
+  background-size: cover;
+  &__text{
+    font-size: 36px;
+    line-height: 47px;
+    margin-bottom: 75px;
+    @media(max-width:992px){
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  &__button{
+
+  }
+}

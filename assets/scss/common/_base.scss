@@ -1,0 +1,84 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  //margin-bottom: $footer-height;
+  font-family: $regular;
+}
+
+main {
+  // max-width: 1600px;
+  margin: auto;
+}
+
+footer {
+  //position: absolute;
+  //bottom: 0;
+  //width: 100%;
+  /* Set the fixed height of the footer here */
+  //height: $footer-height;
+  //background-color: #f5f5f5;
+
+  @media (max-width:992px) {
+    //margin-top: 100px;
+    //height: auto;
+    //position: static;
+  }
+}
+
+a {
+  color: $blue;
+
+  &:hover {
+    color: $blue;
+  }
+}
+
+a, .btn, button {
+  transition: all 0.17s ease-in-out;
+}
+
+b, strong, .text-bold {
+  font-family: $bold;
+}
+
+textarea {
+  resize: none;
+}
+
+.col-table {
+  display: table !important;
+
+  @media (max-width:992px) {
+    display: block !important;
+  }
+
+  .col-cell {
+    float: none !important;
+    display: table-cell !important;
+    vertical-align: top;
+
+    @media (max-width:992px) {
+      display: block !important;
+      float: left !important;
+    }
+  }
+}
+
+.h1:first-child, .h2:first-child, .h3:first-child, .h4:first-child,
+.h5:first-child, .h6:first-child, h1:first-child, h2:first-child, h3:first-child,
+h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
+}
+
+.h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .h5:last-child,
+.h6:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child,
+h5:last-child, h6:last-child {
+  margin-bottom: 0;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: $bold;
+}

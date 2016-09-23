@@ -1,0 +1,25 @@
+extends _layout
+
+block content
+  +section-page-header('Продукция')
+
+  +breadcrumb
+
+  .container
+    .wrapper
+      +aside
+
+      article(block="main-article")
+        img(src="img/img_sertificate_big.jpg", alt="product img").img-responsive
+
+        h4 Название услуги
+        p Название услуги Название услуги Название услуги Название услуги Название услуги Название услуги Название услуги Название услуги  Название услуги Название услуги Название услуги Название услуги Название услуги Назв ание услуги .
+
+        h4 Слайдер с документами
+
+        .sertificate-slider
+          -for(var i = 0; i < 10; i++)
+            div: a(href="img/img_sertificate4.jpg").popup-image-link: img(src="img/img_sertificate4.jpg", alt="sectificate image")
+            div: a(href="img/img_sertificate3.jpg").popup-image-link: img(src="img/img_sertificate3.jpg", alt="sectificate image")
+            div: a(href="img/img_sertificate2.jpg").popup-image-link: img(src="img/img_sertificate2.jpg", alt="sectificate image")
+            div: a(href="img/img_sertificate1.jpg").popup-image-link: img(src="img/img_sertificate1.jpg", alt="sectificate image")

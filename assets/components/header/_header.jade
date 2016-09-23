@@ -1,0 +1,37 @@
+.affix-wrap
+  header(block="header").nav-affix.affix
+    .container(elem="container")
+      div(block="header-logo")
+        a(href="index.html" elem="link").db.no-underline
+          div(elem="left")
+            img(src="img/img_header_logo.png", alt="header logo")
+          div(elem="right")
+            span(elem="text") Пластполимер
+
+      div(block="header-orden")
+        img(src="img/orden.png", alt="orden img" elem="img")
+        img(src="img/orden2.png", alt="orden img" elem="img")
+
+      .clearfix(elem="right-block")
+        .clearfix(elem="clearfix")
+
+          button.navbar-toggle.visible-xs.visible-sm.pull-right.open-menu__button(type='button', data-show="left-menu")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+          div(block="header-language").pull-right.visible-md.visible-lg
+            .cur(elem="russian")
+              img(src="img/img_ru_flag.png", alt="language image")
+              span(elem="label").db RU
+
+            .cur(elem="english")
+              img(src="img/img_en_flag.png", alt="language image")
+              span(elem="label").db EN
+
+          div(block="header-phone").pull-right.visible-md.visible-lg
+            span(elem="label") Телефон
+            a(href="tel:18001234567" elem="phone") 1.800.123.4567
+
+
+        include ../navMenu/_navMenu

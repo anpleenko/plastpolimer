@@ -1,0 +1,8 @@
+div(block="our-achievements")
+  .container(elem="container")
+    .row(elem="row")
+      each item in ourAchievements
+        .col-md-3(elem="col")
+          img(src="#{item.imageURL}", alt="our achievements image" elem="image").table-center.img-responsive.cur
+          span.db.title(elem="number")= item.number
+          p(elem="hiden-text").animated= item.text

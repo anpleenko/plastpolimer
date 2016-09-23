@@ -1,0 +1,43 @@
+extends _layout
+
+block script
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC9KoN5akFCIbh2V-_gPA6Qa076Kk-cxe4&callback=window.initMap', async='', defer='')
+
+block content
+
+  +section-contact-header
+  +breadcrumb
+
+  div(block="contact")
+    .container(elem="container")
+      .row(elem="row")
+
+        .col-md-6(elem="col")
+          h3(elem="section-title") Наши телефоны
+          section(elem="phone")
+            .row(elem="phone-row")
+              each item in contactPhone
+                .col-md-6(elem="phone-col")
+                  h3(elem="contact-title").text-uppercase= item.title
+                  p(elem="contact-text")= item.tel
+                  p(elem="contact-text")= item.fax
+
+        .col-md-6(elem="col")
+          h3(elem="section-title") Схема проезда
+
+          section(elem="transport-sheme")
+            .row(elem="transport-row")
+              each item in contactTransportSheme
+                .col-md-6(elem="transport-col")
+                  h3(elem="contact-title").text-uppercase= item.title
+                  p(elem="contact-text")= item.address
+
+                  //если для физ лиц
+                  if item.individuals
+                    a(data-toggle="modal" data-target="#show-modal-for-individuals" elem="open-modal").cur= item.buttonTitle
+                  else
+                    a(data-toggle="modal" data-target="#show-modal-for-entities" elem="open-modal").cur= item.buttonTitle
+
+          section(elem="map-section")
+            #map(elem="map")
+

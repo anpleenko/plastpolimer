@@ -1,0 +1,53 @@
+mixin section-page-header(name)
+  div(block="section-page-header")
+    .container(elem="container")
+      .row(elem="row")
+        .col-md-8(elem="col")
+          .transform-middle(elem="transform-middle")
+            h1(elem="title").text-white= name
+        .col-md-4(elem="col")
+          .clearfix.transform-middle(elem="transform-middle")
+            button(type="button" elem="button" data-toggle="modal" data-target="#call-back-modal").btn-call-back
+              i.ico-phone
+              | Заказать обратный звонок
+
+mixin section-contact-header()
+  div(block="section-contact-header")
+    .container(elem="container")
+      .row(elem="row")
+        .col-md-8(elem="col")
+          .transform-middle(elem="transform-middle")
+            h1(elem="title").text-white Наши контакты
+            p(elem="subtitle").text-white Свяжитесь с нами любым удобным для вас способом
+        .col-md-4(elem="col")
+          .clearfix.transform-middle(elem="transform-middle")
+            button(type="button" elem="button" data-toggle="modal" data-target="#call-back-modal").btn-call-back
+              i.ico-phone
+              | Заказать обратный звонок
+
+mixin breadcrumb
+  div(block="section-breadcrumb")
+    .container(elem="container")
+      ol(elem="list").lsn
+        li: a(href='#') Главная
+        li.active Деятельность
+
+mixin aside
+  aside(block="main-aside").visible-md.visible-lg
+    div(elem="inner")
+      each item in productSideBarItems
+        h3(elem="title")= item.title
+
+        if item.product
+          ul(elem="list-products").lsn.pl0
+            each val,i in item.product
+              li(class="#{(i==1)?('active'):('')}"): a(href="#")= val
+
+        if item.service
+          ul(elem="list-service").lsn.pl0
+            each val,i in item.service
+              li(class="#{(i==6)?('active'):('')}"): a(href="#")= val
+
+      a(href="#" elem="download").btn-download-price
+        .ico
+        | Скачать прайс лист

@@ -1,0 +1,39 @@
+.our-achievements{
+  margin-top: (227px / 2) + 108px;
+  margin-bottom: -53px;
+  background: #f8f9f9;
+  &__image{
+
+  }
+  &__number{
+    font-size: 80px;
+    text-align: center;
+    font-family: $arialBold;
+    line-height: 80px;
+    color: $blue;
+    margin-bottom: 10px;
+  }
+  &__container{
+    // margin-top: -227px / 2;
+  }
+  &__col{
+    transform: translateY(-227px / 2);
+    &:nth-child(2n){
+      .achievements-item__number{
+        color: #116988;
+      }
+    }
+  }
+  &__image{
+    margin-bottom: 7px;
+    // transform: translateY(-50%);
+  }
+  &__hiden-text{
+    // transform: translateY(-50%);
+    opacity: 0;
+    font-size: 16px;
+    color: #585858;
+    text-align: center;
+    line-height: 21px;
+  }
+}

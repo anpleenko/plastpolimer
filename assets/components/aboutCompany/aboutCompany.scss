@@ -1,0 +1,39 @@
+.about-company{
+  margin-bottom: 230px;
+  @media(max-width:992px){
+    margin-bottom: 30px;
+  }
+  &__section-title{
+    font-size: 36px;
+    color: #333;
+    font-family: $bold;
+    position: relative;
+    margin-bottom: 50px;
+    &:after{
+      left: 0;
+      bottom: -19px;
+      content: '';
+      background: $blue;
+      position: absolute;
+      height: 3px;
+      width: 125px;
+    }
+    a{
+      color: inherit;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  &__text{
+    color: #777;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  &__img{
+    float: right;
+    @media(max-width: 992px){
+      float: none;
+    }
+  }
+}

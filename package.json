@@ -1,0 +1,48 @@
+{
+  "name": "vseopro",
+  "version": "1.0.0",
+  "description": "seo portal",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vseopro/vseopro"
+  },
+  "scripts": {
+    "prebuild": "rm -rf app && rm -rf assets/bower && bower install",
+    "build": "gulp bootstrap && gulp scss && gulp imagemin && gulp babel && gulp jade && gulp static",
+    "start": "gulp"
+  },
+  "author": "vaeum",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "babel-core": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "browser-sync": "^2.16.0",
+    "css-mqpacker": "^5.0.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jade": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-posthtml": "^1.5.2",
+    "gulp-prettify": "^0.5.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob-import": "^0.1.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.8",
+    "jest-cli": "^15.1.1",
+    "main-bower-files": "^2.13.1",
+    "perfectionist": "^2.3.0",
+    "postcss-custom-selectors": "^3.0.0",
+    "postcss-pxtorem": "^3.3.1",
+    "posthtml-bem": "^0.2.2",
+    "run-sequence": "^1.2.2"
+  }
+}

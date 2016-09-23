@@ -1,0 +1,14 @@
+div(block='our-service')
+  .container(elem="container")
+    h3(elem="section-title") Наши услуги
+    .col-table.row(elem="row")
+      each item in ourService
+        .col-cell.col-md-4(elem="item")
+          div(elem="header")
+            img(src="#{item.imageURL}", alt="our service image" elem="img").img-responsive
+            h4(elem="title")= item.title
+            ul(elem="list")
+              each val in item.items
+                li(elem="list-item")= val
+          div(elem="footer")
+            a(href="#" elem="button") Подробнее

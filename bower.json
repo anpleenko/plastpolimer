@@ -1,0 +1,30 @@
+{
+  "name": "vseopro",
+  "description": "SEO portal",
+  "main": "index.js",
+  "authors": [
+    "vaeum"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/vseopro/vseopro",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "show-js-error": "^1.2.0",
+    "bootstrap-sass": "^3.3.6"
+  },
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "bootstrap": "~3.3.6",
+    "goodshare.js": "goodshare#^3.2.5",
+    "slick-carousel": "^1.5.9",
+    "css.modfiles": "^0.0.6",
+    "magnific-popup": "^1.1.0"
+  }
+}

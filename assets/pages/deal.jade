@@ -1,0 +1,15 @@
+extends _layout
+
+block content
+  +section-page-header('Деятельность')
+
+  +breadcrumb
+
+  div(block="deal-block")
+    .container(elem="container")
+      .row(elem="row")
+        each item in dealBlocks
+          .col-md-6(elem="col")
+            img(src="#{item.imageURL}", alt="deal img" elem="img").img-responsive
+            h3(elem="title").text-uppercase= item.title
+            p(elem="text")= item.text

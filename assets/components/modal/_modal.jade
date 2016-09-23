@@ -1,0 +1,44 @@
+.modal.fade(tabindex='-1', role='dialog')#call-back-modal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4.modal-title Заказать обратный звонок
+      .modal-body
+        form(block="call-back-form")
+          .form-group
+            label Ваши имя и фамилия
+            input.form-control(type='email', placeholder='Ваши имя и фамилия')
+          .form-group
+            label Номер телефона
+            input.form-control(type='email', placeholder='Номер телефона')
+          .form-group
+            label(for='exampleInputPassword1') Тема обращения
+            textarea.form-control
+          button.btn.btn-default(type='submit') Отправить
+
+
+.modal.fade(tabindex='-1', role='dialog')#show-modal-for-individuals
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4.modal-title #show-modal-for-individuals
+      .modal-body p One fine body…
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        button.btn.btn-primary(type='button') Save changes
+
+.modal.fade(tabindex='-1', role='dialog')#show-modal-for-entities
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+        h4.modal-title #show-modal-for-entities
+      .modal-body p One fine body…
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal') Close
+        button.btn.btn-primary(type='button') Save changes

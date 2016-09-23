@@ -1,0 +1,18 @@
+nav.main-menu.visible-md.visible-lg
+  ul.menu-list
+    each key in navMenu
+      if !key.submenu
+        li: a(href="#{key.url}") #{key.text}
+      else
+        li
+          a(href="#{key.url}") #{key.text}
+          ul
+            each val in key.submenu
+              if !val.submenu
+                li: a(href="#") #{val.text}
+              else
+                li
+                  a(href="#") #{val.text}
+                  ul
+                    each link in val.submenu
+                      li: a(href="#") #{link.text}

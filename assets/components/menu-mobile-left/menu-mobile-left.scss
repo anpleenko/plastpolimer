@@ -1,0 +1,59 @@
+.mobile{
+  &__link__first{
+    display: block;
+    padding: 5px 10px;
+    &:hover{
+      // color: #fff;
+      // background: #ddd;
+    }
+    &[aria-expanded="true"]{
+      // color: #fff;
+      // background: #ddd;
+    }
+  }
+  &__link__second{
+    // background: #eee;
+    display: block;
+    padding: 5px 15px;
+    &[aria-expanded="true"]{
+      // color: #fff;
+      // background: #ddd;
+    }
+  }
+  &__link__third{
+    // background: #ddd;
+    display: block;
+    padding: 5px 20px;
+  }
+  &__has-menu{
+    position: relative;
+    // background: red;
+    &:before, &:after{
+      position: absolute;
+      content: '';
+      right: 22px;
+      top: 50%;
+      // margin-top: 0px;
+      background: #333;
+      height: 1px;
+      width: 10px;
+    }
+    &:before{
+      transform: rotate(45deg);
+    }
+    &:after{
+      transform: rotate(-45deg);
+      right: 15px;
+    }
+    &[aria-expanded="true"]{
+      &:before{
+        // transform: rotate(45deg);
+        right: 15px;
+      }
+      &:after{
+        // transform: rotate(-45deg);
+        right: 21px;
+      }
+    }
+  }
+}

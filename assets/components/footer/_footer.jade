@@ -1,0 +1,35 @@
+footer(block="main-footer")
+  div(elem="inner")
+    .container(elem="container")
+      .row(elem="row")
+        .col-md-3(elem="col")
+          h4(elem="section-header") Немного о нас
+          p(elem="slogan") Нам не нужно, чтобы Вы были довольны, нам нужно, чтобы Вы были успешны!
+          p(elem="social-header") Рассказать о нас
+          ul(elem="social-list").menu-list
+            li(elem="social-item"): a(href="#" elem="social-link" data-type="tw").goodshare.icon-twitter
+            li(elem="social-item"): a(href="#" elem="social-link" data-type="li").goodshare.icon-linkedin-square
+            li(elem="social-item"): a(href="#" elem="social-link" data-type="pt").goodshare.icon-pinterest
+            li(elem="social-item"): a(href="#" elem="social-link" data-type="gp").goodshare.icon-google
+            li(elem="social-item"): a(href="#" elem="social-link" data-type="vk").goodshare.icon-vk
+            li(elem="social-item"): a(href="mailto:admin@mail.ru" elem="social-link").icon-envelope
+
+        .col-md-4.col-lg-offset-1(elem="col")
+          h4(elem="section-header") Контакты
+          p(elem="contact-text") Администрация (812) 718-27-52, 740-78-69
+          p(elem="contact-text") Планово-производственное бюро (ППБ) (812) 540-30-16
+          p(elem="contact-text") Факс: +7 (812) 740-73-41
+          p(elem="contact-text") E-mail: proekt@plastpolymer.com
+          p(elem="contact-text") Почтовый адрес и адрес фактического размещения: Россия, 195197, Санкт-Петербург, Полюстровский проспект, 32.
+
+        .col-md-3.col-lg-offset-1(elem="col")
+          h4(elem="section-header") Напишите нам
+          form(elem="form")
+            input(type="email" elem="email-field" placeholder="Ваш E-mail").fluid
+            textarea(elem="message" placeholder="Ваше сообщение").fluid
+            button(type="submit" elem="submit").btn-footer-submit Отправить
+
+  div(elem="copyright").text-white
+    .transform-middle
+      .container
+        span.db © 2016 Все права защищены.ОАО “Пластполимер”, ООО “Доходное дело”.

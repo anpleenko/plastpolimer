@@ -1,0 +1,10 @@
+-var productTitle = ['Клей', 'Мастика "АДЕМ"', 'Бытовая химия']
+
+div(block="our-product")
+  .container(elem="container")
+    h3(elem="section-title") Наша продукция
+    .row(elem="row")
+      each val,i in  productTitle
+        .col-sm-4(elem="col")
+          span(elem="title").db #{val}
+          img(src="img/img_product#{i + 1}.jpg", alt="product img" elem="img").img-responsive.table-center
