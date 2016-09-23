@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "jquery": "~2.2.0",
-    "bootstrap": "~3.3.6",
+    "bootstrap": "~3.3.7",
     "goodshare.js": "goodshare#^3.2.5",
     "slick-carousel": "^1.5.9",
     "css.modfiles": "^0.0.6",
