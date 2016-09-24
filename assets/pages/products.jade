@@ -1,7 +1,7 @@
 extends _layout
 
 block content
-  +section-page-header('Продукция')
+  +section-page-header('Продукция', true)
 
   +breadcrumb
 
@@ -10,6 +10,10 @@ block content
       +aside
 
       article(block="main-article")
+        #controll-slider
+          -for(var i = 0; i < 10; i++)
+            div(elem="item")
+              img(src="http://placehold.it/350x150" alt="slider image")
 
         .clearfix(block="product-list")
           a(href="#" elem="item").media

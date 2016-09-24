@@ -1,4 +1,4 @@
-mixin section-page-header(name)
+mixin section-page-header(name, playSlider)
   div(block="section-page-header")
     .container(elem="container")
       .row(elem="row")
@@ -7,6 +7,8 @@ mixin section-page-header(name)
             h1(elem="title").text-white= name
         .col-md-4(elem="col")
           .clearfix.transform-middle(elem="transform-middle")
+            if playSlider
+              div(elem="slider-controll")
             button(type="button" elem="button" data-toggle="modal" data-target="#call-back-modal").btn-call-back
               i.ico-phone
               | Заказать обратный звонок
