@@ -1,7 +1,7 @@
 extends _layout
 
 block content
-  +section-page-header('Продукция', true)
+  +section-page-header('Продукция')
 
   +breadcrumb
 
@@ -10,37 +10,76 @@ block content
       +aside
 
       article(block="main-article")
-        #controll-slider
+        //- #controll-slider
           -for(var i = 0; i < 10; i++)
             div(elem="item")
               img(src="http://placehold.it/350x150" alt="slider image")
-
+        h3 Наши продукты
         .clearfix(block="product-list")
           a(href="#" elem="item").media
             .media-left.media-middle(elem="media-left")
               div(elem="wrap-img")
                 img(src="http://plastpolymer.com/media/cache/c4/2b/c42baf79a91da471c9e634bf06953dd5.jpg", alt="product image" elem="img")
             .media-body.media-middle(elem="media-body")
-              h3(elem="title") Полимерные композиции
+              h4(elem="title") Полимерные композиции
               p(elem="description") Средство МДЖ (моющая дезинфицирующая жидкость) является мощным инструментом при любых уборочных работах в помещениях. МДЖ – это концентрированное щелочное моющее
           a(href="#" elem="item").media
             .media-left.media-middle(elem="media-left")
               div(elem="wrap-img")
                 img(src="http://plastpolymer.com/media/cache/51/a2/51a24053e7bc55e472d942bb408cac0a.jpg", alt="product image" elem="img")
             .media-body.media-middle(elem="media-body")
-              h3(elem="title") Клей-расплав «Пластерм»
+              h4(elem="title") Клей-расплав «Пластерм»
               p(elem="description") Средство МДЖ (моющая дезинфицирующая жидкость) является мощным инструментом при любых уборочных работах в помещениях. МДЖ – это концентрированное щелочное моющее
           a(href="#" elem="item").media
             .media-left.media-middle(elem="media-left")
               div(elem="wrap-img")
                 img(src="http://plastpolymer.com/media/cache/d7/0f/d70fdaecd53df03c8993ff59f4eb538f.jpg", alt="product image" elem="img")
             .media-body.media-middle(elem="media-body")
-              h3(elem="title") Вибропоглощающая (вибродемпфирующая) мастика «Адем»
+              h4(elem="title") Вибропоглощающая (вибродемпфирующая) мастика «Адем»
               p(elem="description") Вибропоглощающая (вибродемпфирующая) мастика «Адем» представляет собой однокомпонентную высоковязкую пасту, предназначенную для получения
           a(href="#" elem="item").media
             .media-left.media-middle(elem="media-left")
               div(elem="wrap-img")
                 img(src="http://plastpolymer.com/media/cache/d7/0f/d70fdaecd53df03c8993ff59f4eb538f.jpg", alt="product image" elem="img")
             .media-body.media-middle(elem="media-body")
-              h3(elem="title") Средство дезинфицирующее с моющим эффектом МДЖ
+              h4(elem="title") Средство дезинфицирующее с моющим эффектом МДЖ
               p(elem="description") Средство МДЖ (моющая дезинфицирующая жидкость) является мощным инструментом при любых уборочных работах в помещениях.
+          a(href="#" elem="item").media
+            //- .media-left.media-middle(elem="media-left")
+              div(elem="wrap-img")
+                img(src="http://plastpolymer.com/media/cache/d7/0f/d70fdaecd53df03c8993ff59f4eb538f.jpg", alt="product image" elem="img")
+            .media-body.media-middle(elem="media-body")
+              h4(elem="title") Продукт без картинки
+              p(elem="description") Средство МДЖ (моющая дезинфицирующая жидкость) является мощным инструментом при любых уборочных работах в помещениях.
+
+        h3 Наши услуги
+        .clearfix(block="product-list")
+          a(href="#" elem="item").media
+            //- .media-left.media-middle(elem="media-left")
+              //- div(elem="wrap-img")
+                img(src="http://plastpolymer.com/media/cache/c4/2b/c42baf79a91da471c9e634bf06953dd5.jpg", alt="product image" elem="img")
+            .media-body.media-middle(elem="media-body")
+              h4(elem="title") Услуга без картинки
+              p(elem="description") Описание услуги длинное Описание услуги длинное Описание услуги длинное Описание услуги длинное Описание услуги длинное Описание услуги длинное Описание услуги длинное Описание услуги длинное
+          a(href="#" elem="item").media
+            .media-left.media-middle(elem="media-left")
+              div(elem="wrap-img")
+                img(src="http://plastpolymer.com/media/cache/51/a2/51a24053e7bc55e472d942bb408cac0a.jpg", alt="product image" elem="img")
+            .media-body.media-middle(elem="media-body")
+              h4(elem="title") Услуга с картинкой
+              p(elem="description") Средство МДЖ (моющая дезинфицирующая жидкость) является мощным инструментом при любых уборочных работах в помещениях. МДЖ – это концентрированное щелочное моющее
+          a(href="#" elem="item").media
+            .media-left.media-middle(elem="media-left")
+              div(elem="wrap-img")
+                img(src="http://plastpolymer.com/media/cache/d7/0f/d70fdaecd53df03c8993ff59f4eb538f.jpg", alt="product image" elem="img")
+            .media-body.media-middle(elem="media-body")
+              h4(elem="title") Вибропоглощающая (вибродемпфирующая) мастика «Адем»
+              p(elem="description") Вибропоглощающая (вибродемпфирующая) мастика «Адем» представляет собой однокомпонентную высоковязкую пасту, предназначенную для получения
+          a(href="#" elem="item").media
+            .media-left.media-middle(elem="media-left")
+              div(elem="wrap-img")
+                img(src="http://plastpolymer.com/media/cache/d7/0f/d70fdaecd53df03c8993ff59f4eb538f.jpg", alt="product image" elem="img")
+            .media-body.media-middle(elem="media-body")
+              h4(elem="title") Средство дезинфицирующее с моющим эффектом МДЖ
+              p(elem="description") Средство МДЖ (моющая дезинфицирующая жидкость) является мощным инструментом при любых уборочных работах в помещениях.
+

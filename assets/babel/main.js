@@ -153,7 +153,7 @@ $(() => {
 
     if($(".header-jimbotron__slider").length){
         const $headerSlider = $('.header-jimbotron__slider');
-        const $sliderHeaderControll = $('.jimbotron-footer__slider-controll');
+        const $sliderHeaderControll = $('.header-jimbotron__slider-controll');
 
         $headerSlider.slick({
             dots: false,
