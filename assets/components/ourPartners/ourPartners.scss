@@ -58,9 +58,16 @@
     }
   }
   .slick-track{
-    transform: translateY(50%) !important;
+    // transform: translateY(50%);
   }
   .transform-middle{
+    // padding: 0 20px;
+  }
+  .slick-initialized .slick-slide{
+    display: inline-block;
+    vertical-align: middle;
     padding: 0 20px;
+    float: none;
+    transform: translateY(0%);
   }
 }
