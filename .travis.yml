@@ -5,10 +5,11 @@ env:
   global:
     - GH_REF: github.com/vaeum/plastpolimer.git
     - secure: V1PijHYxB43a5UbF5KoAGXZkrEp2DBGamwlIxu0Tr0ecxQ3/C2u6y7ogHno7omLUupXkz3eHH6s7XG1HK6mS34bwZVygdUNGHZcfk0/PSomRaKnRgB+ltgExX3Q/FFxU2QEfDsAMBWLWKjxuKCDHp+1Qew955M4DtfgMAKHRvXsf6elClx8vCb063kfFa7HvfWDMZCE05T6xVGf+DKj4TYC3DBonBIxxYMIYaCXum1s/9Znhxf6PQLkRZGHDhakNS4DuU/dSeIEjEjAeqHhi00tQHEzLve+kALarIczpstGRsF61NDHBNnzNLnqEepnRyM9TVOiet0W+Nii/6NkBYhc1TpAEAU+WClkeJ4TIAi8guajJ3u6uFRHHWfEQOaJNIOPihfrdLmDSqp2gLo0r1tIg7dffjMfAwmw+Uebdn+IG/YJyR/+pMdrWcwtVrfqne2jb6plVumArB2dw4IAstJ8WeDbbGctln7x3TaihNe7n6m4WCajQ0rKVwSKWX9i0YMlVe2pZ+PILPBffVIFqC210r0W/u9FkjvaqHAWBzPS5TZa6dBbS6Wt3OvzYfc5WKKcYPGUJNzFBYSiXPr3MAvMu3vowKxZu5yQ/Fl7m5wfkwqPYlYF89F2ELSWTplinevs6ah4XARF/Ig8GQJRnCuuif9JzXpA+Nnh8xI4sfbA=
+before_install:
+  - npm config set depth 0
 before_script:
   - npm install -g bower
   - npm install -g gulp
-  - npm config set depth 0
 script:
   - npm run build
   - cd app
