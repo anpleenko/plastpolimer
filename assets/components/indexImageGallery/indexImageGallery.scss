@@ -5,9 +5,10 @@
   &__section-title{
     font-size: 36px;
     color: #737574;
-    font-family: $bold;
+    //font-family: $bold;
     position: relative;
     margin-bottom: 63px;
+    text-align: left;
     &:after{
       left: 0;
       bottom: -19px;
