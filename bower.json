@@ -1,12 +1,12 @@
 {
-  "name": "vseopro",
-  "description": "SEO portal",
+  "name": "plastpolimer",
+  "description": "site",
   "main": "index.js",
   "authors": [
     "vaeum"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/vseopro/vseopro",
+  "homepage": "https://github.com/vaeum/plastpolimer",
   "moduleType": [],
   "ignore": [
     "**/.*",
@@ -17,10 +17,7 @@
   ],
   "devDependencies": {
     "show-js-error": "^1.2.0",
-    "bootstrap-sass": "^3.3.6"
-  },
-  "dependencies": {
-    "jquery": "~2.2.0",
+    "bootstrap-sass": "^3.3.6",
     "bootstrap": "~3.3.7",
     "goodshare.js": "goodshare#^3.2.5",
     "slick-carousel": "^1.6.0",

@@ -5,4 +5,4 @@ div(block="our-achievements")
         .col-md-3(elem="col")
           img(src="#{item.imageURL}", alt="our achievements image" elem="image").table-center.img-responsive.cur
           span.db.title(elem="number")= item.number
-          p(elem="hiden-text").animated= item.text
+          p(elem="hiden-text" data-bottom-top="opacity:0;" data-100-top="opacity:1;").animated= item.text
