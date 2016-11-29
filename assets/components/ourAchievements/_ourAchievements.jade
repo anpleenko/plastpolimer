@@ -2,18 +2,18 @@ div(block="our-achievements")
   .container(elem="container")
     .row(elem="row")
       .col-md-3(elem="col")
+        img(src="#{ourAchievements[3].imageURL}", alt="our achievements image" elem="image").table-center.img-responsive.cur
+        span.db.title(elem="number")= ourAchievements[3].number
+        p(elem="hiden-text" data-bottom-top="opacity:0;" data-center="opacity:1;" data-top="opacity:1;").animated= ourAchievements[3].text
+      .col-md-3(elem="col")
         img(src="#{ourAchievements[0].imageURL}", alt="our achievements image" elem="image").table-center.img-responsive.cur
         span.db.title(elem="number")= ourAchievements[0].number
         p(elem="hiden-text" data-bottom-top="opacity:0;" data-center="opacity:0.7;" data-top="opacity:1;").animated= ourAchievements[0].text
-      .col-md-3(elem="col")
-        img(src="#{ourAchievements[1].imageURL}", alt="our achievements image" elem="image").table-center.img-responsive.cur
-        span.db.title(elem="number")= ourAchievements[1].number
-        p(elem="hiden-text" data-bottom-top="opacity:0;" data-center="opacity:0.8;" data-top="opacity:1;").animated= ourAchievements[1].text
       .col-md-3(elem="col")
         img(src="#{ourAchievements[2].imageURL}", alt="our achievements image" elem="image").table-center.img-responsive.cur
         span.db.title(elem="number")= ourAchievements[2].number
         p(elem="hiden-text" data-bottom-top="opacity:0;" data-center="opacity:0.9;" data-top="opacity:1;").animated= ourAchievements[2].text
       .col-md-3(elem="col")
-        img(src="#{ourAchievements[3].imageURL}", alt="our achievements image" elem="image").table-center.img-responsive.cur
-        span.db.title(elem="number")= ourAchievements[3].number
-        p(elem="hiden-text" data-bottom-top="opacity:0;" data-center="opacity:1;" data-top="opacity:1;").animated= ourAchievements[3].text
+        img(src="#{ourAchievements[1].imageURL}", alt="our achievements image" elem="image").table-center.img-responsive.cur
+        span.db.title(elem="number")= ourAchievements[1].number
+        p(elem="hiden-text" data-bottom-top="opacity:0;" data-center="opacity:0.8;" data-top="opacity:1;").animated= ourAchievements[1].text
