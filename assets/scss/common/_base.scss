@@ -82,3 +82,11 @@ h5:last-child, h6:last-child {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-family: $bold;
 }
+
+.link-dark{
+  color: #777;
+
+  &:hover{
+    color: #777;
+  }
+}
