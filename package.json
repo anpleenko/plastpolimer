@@ -11,10 +11,9 @@
     "url": "https://github.com/vseopro/vseopro"
   },
   "scripts": {
-    "init": "npm i && npm run build",
-    "prebuild": "rm -rf app && rm -rf assets/bower && bower install",
-    "build": "./node_modules/.bin/gulp bootstrap && ./node_modules/.bin/gulp scss && ./node_modules/.bin/gulp imagemin && ./node_modules/.bin/gulp babel && ./node_modules/.bin/gulp jade && ./node_modules/.bin/gulp static",
-    "start": "./node_modules/.bin/gulp"
+    "init": "make install",
+    "build": "make build",
+    "start": "make start"
   },
   "author": "vaeum",
   "license": "ISC",
