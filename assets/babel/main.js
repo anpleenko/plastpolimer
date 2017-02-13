@@ -153,7 +153,7 @@ $(() => {
 
     if($(".header-jimbotron__slider").length){
         const $headerSlider = $('.header-jimbotron__slider');
-        const $sliderHeaderControll = $('.header-jimbotron__slider-controll');
+        // const $sliderHeaderControll = $('.header-jimbotron__slider-controll');
 
         $headerSlider.slick({
             dots: false,
@@ -167,16 +167,16 @@ $(() => {
             arrows: false
         });
 
-        $sliderHeaderControll.on("click", () => {
-            if($sliderHeaderControll.hasClass("pause")){
-                $sliderHeaderControll.removeClass("pause");
-                $headerSlider.slick('slickPlay');
-                $headerSlider.slick('slickNext');
-            } else {
-                $sliderHeaderControll.addClass("pause");
-                $headerSlider.slick('slickPause');
-            }
-        });
+        // $sliderHeaderControll.on("click", () => {
+        //     if($sliderHeaderControll.hasClass("pause")){
+        //         $sliderHeaderControll.removeClass("pause");
+        //         $headerSlider.slick('slickPlay');
+        //         $headerSlider.slick('slickNext');
+        //     } else {
+        //         $sliderHeaderControll.addClass("pause");
+        //         $headerSlider.slick('slickPause');
+        //     }
+        // });
     }
 
     if ($(".our-achievements__image").length) {
